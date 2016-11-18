@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="Calculate Discount Percentage" />
+<Content type="html"><![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 14 February 2006), see www.w3.org">
+    
+    <title>Calculate discount percentage</title>
+    
+    <style type="text/css">
+    
+    body{
+    font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    }
+    
+    p, h1, form, button{border:0; margin:0; padding:0;}
+    .spacer{clear:both; height:1px;}
+    
+    /* ----------- My Form ----------- */
+    
+    .myform{
+    margin:0 auto;
+    width:250px;
+    padding:14px;
+    }
+
+    /* ----------- stylized ----------- */
+    
+    #stylized{
+    //border:solid 2px #b7ddf2;
+    border:solid 2px #949494;
+    //background:#ebf4fb;
+    background:#FFF8E0;
+    }
+    
+    #stylized h1 {
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+    }
+    
+    #stylized p{
+    font-size:11px;
+    color:#666666;
+    margin-bottom:20px;
+    //border-bottom:solid 1px #b7ddf2;
+    border-bottom:solid 1px #949494;
+    padding-bottom:10px;
+    }
+        	
+    #stylized ol{
+    font-size:11px;
+    color:#666666;
+    margin-bottom:10px;
+    //border-bottom:solid 1px #b7ddf2;
+    border-bottom:solid 1px #949494;
+    padding-bottom:10px;	
+    }
+    
+    #stylized label{
+    display:block;
+    font-weight:bold;
+    text-align:right;
+    width:140px;
+    margin-top:3px;
+    float:left;
+    }
+    
+    #stylized .small{
+    color:#666666;
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    text-align:right;
+    width:140px;
+    }
+    
+    #stylized input{
+    float:left;
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #949494;
+    text-align:right;	
+    width:75px;
+    margin:2px 0 20px 10px;
+    }
+    
+    #stylized option{
+    font-size:12px;
+    text-align:left;  
+    margin:2px 0 5px 0;
+    }
+
+    #stylized select{
+    float:left;
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #949494;
+    text-align:left;  
+    //width:140px;
+    margin:2px 0 20px 10px;
+    }
+    
+    #stylized button{
+    clear:both;
+    margin-left:150px;
+    width:75px;
+    height:31px;
+    background:#666666 url(img/button.png) no-repeat;
+    text-align:center;
+    line-height:31px;
+    color:#FFFFFF;
+    font-size:11px;
+    font-weight:bold;
+	  margin-bottom:20px;
+    }
+    
+    </style>
+  </head>
+  <body>
+  
+    <script type="text/javascript">
+<!-- hide this script from old browsers
+        function temp(form)
+        {
+          var o = parseFloat(form.OrigPrice.value, 10);
+          var d = parseFloat(form.DiscPrice.value, 10);
+          var p = 0;
+		  
+          p = (o - d) * 100.0 / o;
+		  
+          // round to two decimal places
+          var result = Math.round(p*100)/100;
+		  
+          form.DiscPercent.value = result;
+        }
+<!-- done hiding from old browsers -->
+    </script>
+	
+    <div id="stylized" class="myform">
+      <form id="form" name="form" method="post">
+        <h1>
+          Calculate discount percentage
+        </h1>
+        <ol>
+        <li>Enter the original and discount prices</li>
+        <li>Press the <strong>Calculate</strong> button to get the discount percentage</li>
+        <li>(Click on the <strong>Reset</strong> button to clear all fields and start over)</li>
+        </ol>
+		    <label>Original price </label> <input type="text" name="OrigPrice" id="OrigPrice">
+		    <label>Discount price </label> <input type="text" name="DiscPrice" id="DiscPrice">
+        <button type="button" onclick="temp(this.form)" value="Calculate" name="calc">Calculate</button>
+		    <label>Discount percentage </label> <input type="text" name="DiscPercent" id="DiscPercent">
+        <button type="reset">Reset</button>
+        <div class="spacer"></div>
+      </form>
+    </div>
+  </body>
+</html>
+]]></Content>
+</Module>
